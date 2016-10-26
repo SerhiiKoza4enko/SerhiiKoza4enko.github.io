@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="SiteModule">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="resources/ico/favicon.png">
+
+    <title>Козаченко Лариса Николаевна</title>
+
+    <link href="resources/css/bootstrap.css" rel="stylesheet">
+
+    <link href="resources/css/main.css" rel="stylesheet">
+    
+	<link rel="stylesheet" href="resources/css/font-awesome.min.css">
+    
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+    
+    <script src="resources/js/jquery.min.js"></script>
+    <script src="resources/js/angular/angular.js"></script>
+	
+    <script src="resources/js/module.js"></script>
+	
+    <script type="text/javascript" src="resources/js/smoothscroll.js"></script> 
+    <script src="resources/js/Chart.js"></script>
+
+  </head>
+
+  <body data-spy="scroll" data-offset="0" data-target="#nav" ng-controller="MainController">
+
+	<div id="section-topbar">
+		<div id="topbar-inner">
+			<div class="container">
+				<div class="row">
+					<div class="dropdown">
+						<ul id="nav" class="nav">
+							<li class="menu-item"><a class="smoothScroll" href="#about" title="Про меня"><i class="icon-user"></i></a></li>
+							<li class="menu-item"><a class="smoothScroll" href="#work" title="Работы"><i class="icon-briefcase"></i></a></li>
+							<li class="menu-item"><a class="smoothScroll" href="#galery" title="Галлерея"><i class="icon-briefcase"></i></a></li>
+							<li class="menu-item"><a class="smoothScroll" href="#contact" title="Contact"><i class="icon-envelope"></i></a></li>
+						</ul>
+					</div>
+
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	
+	<div id="headerwrap">
+		<div class="container">
+			<div class="row centered">
+				<div class="col-lg-12">
+					<h1>Козаченко Лариса Николаевна</h1>
+					<h3>Новопокровская школа</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	<section id="about" name="about"></section>
+	<div id="intro">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-2 col-lg-offset-1">
+					<h5>Про меня</h5>
+				</div>
+				<div class="col-lg-6">
+					<p>С отличием закончила Вольновскую среднюю школу Джанкойского района Крымской области. В 1982 году поступила в Мелитопольский государственный педагогический институт. Закончила его в 1987 году, получив диплом учителя химии и биологии. С 15 августа 1987 года работала учителем химии Средней школе № 1 города Джанкоя Крымской области. 15 августа 1990 года перешла на работу в Новопокровскую среднюю школу Красногвардейского района Республики Крым. Работаю в Новопокровской школе 26 лет. Прошла все этапы педагогической работы: начинала учителем химии и биологии, была назначена руководителем методического объединения учителей естественно-математического цикла, работала заместителем директора по учебно-воспитательной работе, 8 лет руководила Новопокровской школой в качестве директора. Все это время преподавала химию и биологию. Реализовывала проблемы "Ведение опорных конспектов - способ систематизации знаний по предметам", "Использование элементов компьютерных технологий в процессе обучения химии". С опорными конспектами по своей методике работаю более 15 лет. С удовольствием перенимаю чужой педагогический опыт, трансформируя его на свои предметы и очень легко делюсь своим педагогическим опытом.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section id="work" name="work"></section>
+	<div class="container desc">
+		<div class="row">
+				<div class="col-lg-2 col-lg-offset-1">
+					<h5>Материалы</h5>
+				</div>
+				
+				<div ng-repeat="work in works">
+					<a ng-click="showDoc(work);">{{work.title}}</a>
+				</div>		
+		</div>
+		<br>
+		<br>
+	</div>
+
+	<iframe class="doc" width="100%"" height="500" src="https://docs.google.com/gview?url=http://localhost:8080/resources/documents/document1.docx&embedded=true"></iframe>
+
+	<section id="contact" name="contact"></section>
+	<div id="footwrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-2 col-lg-offset-1">
+					<h5>Контакты</h5>
+				</div>
+				<div class="col-lg-6">
+					<p><t>Email</t><br/>
+						william@blacktie.co <br/>
+					</p>
+					<p><t>Adress</t><br/>
+						Some Ave. 987 <br/>
+						Postal 23892 <br/>
+						London, England. <br/>
+					</p>
+					<p><t>Phone</t><br/>
+						+55 8933-2383 <br/>
+					</p>
+				</div>
+				<div class="col-lg-3">
+					<p><sm>SOCIAL LINKS</sm></p>
+					<p>
+						<a href="#"><i class="icon-dribbble"></i></a>
+						<a href="#"><i class="icon-twitter"></i></a>
+						<a href="#"><i class="icon-facebook"></i></a>
+						<a href="#"><i class="icon-linkedin"></i></a>
+						<a href="#"><i class="icon-apple"></i></a>
+
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	<div id="c">
+		<div class="container">
+			<p>Created by SK</p>
+		</div>
+	</div>
+    <script src="resources/js/bootstrap.js"></script>
+  </body>
+</html>
