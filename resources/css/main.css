@@ -350,3 +350,34 @@ sm {
 .file span {
 	cursor: default;
 }
+
+.docviewer .modal-dialog {
+	width: 800px;
+}
+
+.docviewer .close {
+	right: 20px;
+    position: absolute;
+    top: 20px;
+    cursor: pointer;
+}
+
+.modal {
+	text-align: center;
+	padding: 0!important;
+}
+
+.modal:before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	margin-right: -4px;
+}
+
+.modal-dialog {
+	display: inline-block;
+	text-align: left;
+	vertical-align: middle;
+}
+
