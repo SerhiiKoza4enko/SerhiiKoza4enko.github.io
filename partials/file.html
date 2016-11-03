@@ -1,0 +1,32 @@
+<div class="file form-group">
+	<div class="input-group left col-sm-10">	
+		<div style="margin-top: 0">
+			<p class="name" ng-click="viewDoc()">{{file.title}}</p>
+		</div>
+		<div class="row col-sm-12 statistic subject">
+			<span class="glyphicon glyphicon-book"></span>
+			<span>{{file.subject}}</span>
+		</div>
+		<div class="row last col-sm-12">
+ 			<div class="col-sm-3 statistic">
+				<span class="glyphicon glyphicon-folder-open"></span>
+				<span>{{file.category}}</span>
+			</div>
+			<div class="col-sm-3 statistic">
+				<span class="glyphicon glyphicon-calendar"></span>
+				<span>{{file.date}}</span>
+			</div>
+			<div class="col-sm-3 statistic">
+				<span class="glyphicon glyphicon-search"></span>
+				<span>Просмотров: {{file.views}}</span>
+			</div>
+			<div class="col-sm-3 statistic">
+				<span class="glyphicon glyphicon-circle-arrow-down"></span>
+				<span>Загрузок: {{file.downoads}}</span>
+			</div>
+		</div>	
+	</div>
+	<div class="input-group right col-sm-2">
+		<span class="glyphicon glyphicon-save download"></span>
+	</div>
+</div>

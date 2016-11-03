@@ -257,6 +257,7 @@ a:after {
 
 .desc {
 	padding-top: 50px;
+	background: #f3f3f3;
 }
 
 .desc p {
@@ -281,4 +282,71 @@ a:after {
 
 sm {
 	font-size: 12px;
+}
+
+.file .input-group {
+	border: 1px solid #d1d1d1;
+	background: white;
+    padding: 10px;
+    height: 100px;
+}
+
+.file .input-group.left {
+    border-radius: 4px 0 0 4px;
+}
+
+.file .input-group.right {
+    border-radius: 0 4px 4px 0;
+    margin-left: -1px;
+    background-color: #E5E5E5;
+    cursor: pointer;
+    max-width: 100px;
+}
+
+.file .input-group.right:hover {
+    color: #315CAB;
+}
+
+.file div {
+	margin-top: 10px;
+	cursor: default;
+}
+
+.file .name {
+	cursor: pointer;
+	color: #315CAB;
+    font-size: 21px;
+    font-weight: 900;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+.file .subject {
+	bottom: 15px;
+	position: absolute;
+}
+
+.file .statistic {
+    margin-left: 0;
+	font-size: 12px;
+}
+
+.file .statistic span {
+	margin-right: 10px;
+}
+
+.file .row.last {
+	margin-top: -10px;
+	bottom: 0;
+	position: absolute;
+}
+
+.file .download {
+    top: 22px;
+    left: 25px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.file span {
+	cursor: default;
 }
