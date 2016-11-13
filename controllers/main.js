@@ -11,7 +11,7 @@ angular.module('SiteModule', ["firebase", "ui.bootstrap", "ngAside"]).controller
     $scope.url = "";
 
     $scope.showDoc = function(file) {
-        $scope.url = $sce.trustAsResourceUrl("https://docs.google.com/gview?url=https://serhiikoza4enko.github.io/resources/documents/" + file.name + "&embedded=true");
+        $scope.url = $sce.trustAsResourceUrl("https://docs.google.com/gview?url=" + file.link + "&embedded=true");
         $scope.title = file.title;
         $scope.modalInstance = $uibModal.open({
             animation: true,

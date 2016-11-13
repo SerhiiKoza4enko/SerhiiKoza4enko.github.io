@@ -19,6 +19,11 @@ angular.module('SiteModule').directive('file', function() {
 				$scope.file.views++;
 				$ctrl.viewFunc($scope.file);
 			}
+
+			$scope.downloadDoc = function() {
+				$scope.file.downoads++;
+				window.open($scope.file.link, '_blank');
+			}
 		}
 	}
 });
