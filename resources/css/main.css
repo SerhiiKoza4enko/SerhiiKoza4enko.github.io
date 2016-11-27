@@ -179,7 +179,7 @@ a:after {
 }
 
 #headerwrap h3 {
-	font-size: 20px;
+	font-size: 30.5px;
 	color: white;
 }
 
@@ -477,9 +477,8 @@ sm {
 }
 
 .photoviewer .modal-dialog {
-	max-height: 10%;
-	height:80%;
-	width:80%;
+	height:100%;
+	width:50%;
 	margin:0;
 }
 
