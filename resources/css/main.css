@@ -153,7 +153,7 @@ a:after {
 
 /* Header Wrap */
 #headerwrap {
-	background: url(../img/header.jpg) no-repeat center top;
+	background: url(../img/header.png) no-repeat center top;
 	margin-top: 60px;
 	padding-top:140px;
 	text-align:center;
@@ -218,7 +218,6 @@ a:after {
 #footwrap {
 	background: #2f2f2f;
 	padding-top: 50px;
-	padding-bottom: 50px;
 }
 
 #footwrap p {
@@ -371,6 +370,10 @@ sm {
     position: absolute;
     top: 20px;
     cursor: pointer;
+}
+
+.docviewer .modal-title {
+    width: 95%;
 }
 
 .modal {
