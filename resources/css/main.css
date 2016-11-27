@@ -406,3 +406,136 @@ sm {
 .headerwrap .left {
 	text-align: left;
 }
+
+.photo {
+	height: 250px;
+	overflow-y: hidden;
+  	cursor:pointer;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    border-radius: 5px;
+    padding: 0;
+    display : flex;
+	align-items : center;
+}
+
+.photo:hover:after {
+	content:'\e003';
+	font-family: 'Glyphicons Halflings';
+	font-size: 2em;
+	color: #fff;
+	padding-right: 20px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	pointer-events: none; /*Careful, this doesn't work on IE<10*/
+}
+
+.photo img {
+  	-webkit-transition: opacity ease-in .5s;
+  	transition: opacity ease-in .5s;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    /*flex-shrink: 0
+    min-width: 100%;
+    min-height: 100%;;*/
+}
+
+.photo img:hover {
+	opacity: .5;
+}
+
+.photo img.wide {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+.photo img.tall {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+}
+
+.carousel-indicators {
+	display: none;
+}
+
+
+
+
+
+/* Modals */
+.modal-backdrop.in {
+	opacity: .85;
+	filter: alpha(opacity=85);
+}
+.modal {
+	overflow: hidden;
+}
+
+.photoviewer .modal-dialog {
+	height:80%;
+	width:80%;
+	margin:0;
+}
+
+.photoviewer .modal-content {
+	height: 100%;
+	width: 100%;
+	background-color:transparent;
+	border:none;
+	box-shadow:none;
+}
+
+.photo-modal-body {
+	height: 80%;
+	padding:0;
+}
+
+.photo-modal-body .img-group {
+	width:auto;
+	position: absolute;
+	top:50%;
+	left:50%;
+	-ms-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+
+.img-group .close {
+	color:#fff;
+	opacity:1;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.img-group .close:hover {
+	transform: scale(2) rotate(90deg);
+	transition: 0.3s;
+}
+
+.img-group .img-responsive {
+	width:100%;
+}
+
+.carousel-indicators {
+	display: none;
+}
+
+@media (min-aspect-ratio: 16/11) { 
+	.img-group .img-responsive {
+		width:auto;
+	    max-width:70%;
+	    margin: auto;
+  	} 
+	.img-group .close {
+	    position:absolute;
+	    top:1.5em;
+	    right:1.5em;
+	    z-index:10;
+  	}
+}
