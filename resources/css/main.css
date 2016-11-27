@@ -471,11 +471,13 @@ sm {
 	opacity: .85;
 	filter: alpha(opacity=85);
 }
+
 .modal {
 	overflow: hidden;
 }
 
 .photoviewer .modal-dialog {
+	max-height: 10%;
 	height:80%;
 	width:80%;
 	margin:0;
@@ -490,7 +492,6 @@ sm {
 }
 
 .photo-modal-body {
-	height: 80%;
 	padding:0;
 }
 
@@ -506,16 +507,15 @@ sm {
 }
 
 .img-group .close {
-	color:#fff;
 	opacity:1;
 	position: absolute;
 	top: 0;
 	right: 0;
+	color: #CCCCCC;
 }
 
 .img-group .close:hover {
-	transform: scale(2) rotate(90deg);
-	transition: 0.3s;
+	color: #808080;
 }
 
 .img-group .img-responsive {
@@ -532,10 +532,4 @@ sm {
 	    max-width:70%;
 	    margin: auto;
   	} 
-	.img-group .close {
-	    position:absolute;
-	    top:1.5em;
-	    right:1.5em;
-	    z-index:10;
-  	}
 }
