@@ -26,6 +26,11 @@ angular.module('SiteModule', ["firebase", "ui.bootstrap", "ngAside"]).controller
         });
     }
 
+    $scope.updateDoc = function(file) {
+        $http.put('https://api.mlab.com/api/1/databases/larisa/collections/works?apiKey=jL3Dzaj13sD0yfcWH3CQz322xUnQRRbs&q={"id":' + file.id + '}', file);
+        console.log(file);
+    }
+
     $scope.close = function() {
         $scope.modalInstance.dismiss();
     }

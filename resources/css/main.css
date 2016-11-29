@@ -480,7 +480,7 @@ sm {
 }
 
 .photoviewer .modal-dialog {
-	height:100%;
+	height:50%;
 	width:50%;
 	margin:0;
 }

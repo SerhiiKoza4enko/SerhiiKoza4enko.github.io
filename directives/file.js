@@ -8,7 +8,8 @@ angular.module('SiteModule').directive('file', function() {
 			file: "="
 		},
 		bindToController: {
-			viewFunc: "="
+			viewFunc: "=",
+			updateFunc: "="
 		},
 		controller: function () {
       	},
@@ -18,11 +19,13 @@ angular.module('SiteModule').directive('file', function() {
 			$scope.viewDoc = function() {
 				$scope.file.views++;
 				$ctrl.viewFunc($scope.file);
+				$ctrl.updateFunc($scope.file);
 			}
 
 			$scope.downloadDoc = function() {
 				$scope.file.downoads++;
-				window.open($scope.file.link, '_blank');
+				window.open("/resources/documents/" + $scope.file.link, '_blank');
+				$ctrl.updateFunc($scope.file);
 			}
 		}
 	}
