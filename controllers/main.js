@@ -3,6 +3,10 @@
 angular.module('SiteModule', ["firebase", "ui.bootstrap", "ngAside"]).controller('MainController', function($scope, $http, $timeout, $firebase, $uibModal, $sce) {
     $scope.active = 0;
 
+    $http.get("https://api.mlab.com/api/1/databases/larisa/collections/works?apiKey=jL3Dzaj13sD0yfcWH3CQz322xUnQRRbs").then(function(response) {
+        $scope.works = response.data;
+    });
+
     $http.get("https://api.mlab.com/api/1/databases/larisa/collections/photos?apiKey=jL3Dzaj13sD0yfcWH3CQz322xUnQRRbs").then(function(response) {
         $scope.photos = response.data;
     });
