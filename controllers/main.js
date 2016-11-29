@@ -5,8 +5,12 @@ angular.module('SiteModule', ["firebase", "ui.bootstrap", "ngAside"]).controller
     $scope.works = [];
     var ref = new Firebase("https://prikol-be70b.firebaseio.com/works");
     var obj = $firebase(ref).$asObject();
-    $scope.works = obj;
-    obj.$bindTo($scope, "works");
+    /*$scope.works = obj;
+    obj.$bindTo($scope, "works");*/
+
+    $http.get("https://api.mlab.com/api/1/databases/larisa/collections/works?apiKey=jL3Dzaj13sD0yfcWH3CQz322xUnQRRbs").then(function(response) {
+        $scope.works = response.data;
+    });
 
 
     ref = new Firebase("https://prikol-be70b.firebaseio.com/photos");
@@ -17,7 +21,7 @@ angular.module('SiteModule', ["firebase", "ui.bootstrap", "ngAside"]).controller
     $scope.url = "";
 
     $scope.showDoc = function(file) {
-        $scope.url = $sce.trustAsResourceUrl("https://docs.google.com/gview?url=" + file.link + "&embedded=true");
+        $scope.url = $sce.trustAsResourceUrl("https://docs.google.com/gview?url=kozachenko-larisa.ru/resources/documents/" + file.link + "&embedded=true");
         $scope.title = file.title;
         $scope.modalInstance = $uibModal.open({
             animation: true,
